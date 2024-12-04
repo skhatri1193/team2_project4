@@ -32,9 +32,8 @@ We visualized residuals to see if the model’s errors are random (ideal) or pat
 We then optimized our model's performance by tuning hyperparameters. We generated a Receiver Operating Characteristic curve, calculated the Area under the curve (AUC) to evaluate the performance of our logistic regression model. *here we need to add Deniza explanation for this graph*: 
 <img width="567" alt="Screenshot 2024-12-04 at 6 50 12 PM" src="https://github.com/user-attachments/assets/a3726ae8-dfac-4e4c-bceb-823cc32184e1">
 
-We thought it would be ideal to get feature correlation analysis with Death Events and Survival Time in order to understand the data better and helping identify the most relevant ones. However, we found that there was not anything strong as the tables below show: 
-<img width="305" alt="Screenshot 2024-12-04 at 6 51 27 PM" src="https://github.com/user-attachments/assets/caed6ff1-87d3-481a-8e53-0ac68e23a928">
-<img width="302" alt="Screenshot 2024-12-04 at 6 51 37 PM" src="https://github.com/user-attachments/assets/9dce4ed6-02cc-4baa-911d-f7c937ad04cf">
+We thought it would be ideal to get feature correlation analysis with Death Events and Survival Time in order to understand the data better and helping identify the most relevant ones. However, we found that there were only weaker correlations as the tables below show: 
+<img width="305" alt="Screenshot 2024-12-04 at 6 51 27 PM" src="https://github.com/user-attachments/assets/caed6ff1-87d3-481a-8e53-0ac68e23a928"> <img width="302" alt="Screenshot 2024-12-04 at 6 51 37 PM" src="https://github.com/user-attachments/assets/9dce4ed6-02cc-4baa-911d-f7c937ad04cf">
 
 Lastly, we plotted a Logistic Regression Curve representing Age vs the Probability of Death. After scaling, age values below the mean will become negative which means these represent younger patients and values above the mean, those that are positive represent older patients. Initially the model was train on multiple features (X_Train) which added outside noise to our data. So we focused exclusively on how age related to DEATH_EVENTS. By simplifying our data in this way, we removed outside noise and were able to generate a smoother more interpretable curve rather than a straight line where the probability is either 0 or 1. 
 
