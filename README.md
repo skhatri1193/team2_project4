@@ -138,3 +138,7 @@ However, the divergence between the training and validation accuracy, as well as
 
 
 In summary, this accuracy curve shows the model's learning process, where it initially struggles to learn effectively but eventually improves its training performance. However, the gap between the training and validation accuracy suggests the model may be overfitting, and further steps may be needed to improve its generalization capabilities.
+
+
+So, the final evaluation metrics of 0.517 loss and 0.84 accuracy are likely the true performance of the model on the unseen test data, which is the ultimate measure of its effectiveness. The discrepancy with the trends shown in the loss and accuracy plots is due to the early stopping mechanism and potential differences between validation and test set performance.
+This is a common phenomenon in machine learning, where the final model performance may not exactly match the trends observed during the training process. The key is to focus on the overall learning dynamics shown in the plots and the final test set performance as the most reliable measure of the model's capabilities.
