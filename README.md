@@ -14,16 +14,20 @@ In order to visualize the decision tree, you will need to install/download graph
 # Results
 For this analysis, two separate libraries were used to train gradient boosting models: GradientBoostingClassifier from sklearn and XGBClassifier. The analysis below will breakdwon the results from both models. It is import to note that prior to training the different models, the dataset was scaled using standard scaler.
 
+Please note the following nomencleture used in the analysis below:
+* death event - patient is deceased
+* no-death event - patient is not deceased
+
 
 ## GradientBoostingClassifier
 * Acccuracy score - The model as a whole had a accuracy score of 89% when predicting death events
-* Precision - Based on the clasification report, we can tell that 90% of the predicted death even were correct and 88% of the predicted no death events were correct. This indicates that the precision of this model is quite high
-* Recall -  Death events had a recall score of 96% while no death events had a recall score of 88%. This indicates that for death events, the ratio of correctly predicted death events to the total actual death events was a 88%. By comparison, the recall for no-death events was 70% indicating the model is not as good at prediting when there will be no deaths
+* Precision - Based on the clasification report, we can tell that 90% of the predicted no-death events were correct and 88% of the predicted death events were correct. This indicates that the precision of this model is quite high
+* Recall -  No-death events had a recall score of 96% while no death events had a recall score of 88%. This indicates that for death events, the ratio of correctly predicted death events to the total actual death events was a 88%. By comparison, the recall for death events was 70% indicating the model is not as good at prediting when there will be no deaths
 
 ## XGBClassifier
 * Acccuracy score - The model as a whole had a accuracy score of 91% when predicting death events
-* Precision - Based on the clasification report, we can tell that 94% of the predicted death even were correct and 81% of the predicted no death events were correct. This indicates that the precision of this model is quite high
-* Recall -  Death events had a recall score of 96% while no death events had a recall score of 93%. This indicates that for death events, the ratio of correctly predicted death events to the total actual death events was a 88%. By comparison, the recall for no-death events was 85%.
+* Precision - Based on the clasification report, we can tell that 94% of the predicted no-death events were correct and 81% of the predicted death events were correct. This indicates that the precision of this model is quite high
+* Recall -  No-death events had a recall score of 96% while no death events had a recall score of 93%. This indicates that for death events, the ratio of correctly predicted death events to the total actual death events was a 88%. By comparison, the recall for death events was 85%.
 
 
 # Conclusion
