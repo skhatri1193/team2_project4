@@ -29,7 +29,22 @@ We then moved on to a linear regression for Survival Time. We trained the regres
 We visualized residuals to see if the model’s errors are random (ideal) or patterned and they were not randomly distributed telling us that the model has  problems in capturing relationship between features and the survival time: 
 <img width="580" alt="Screenshot 2024-12-04 at 6 48 27 PM" src="https://github.com/user-attachments/assets/80b1acdc-6072-4d3e-be4e-78147703e7b1">
 
-We then optimized our model's performance by tuning hyperparameters. We generated a Receiver Operating Characteristic curve, calculated the Area under the curve (AUC) to evaluate the performance of our logistic regression model. *here we need to add Deniza explanation for this graph*: 
+We then optimized our model's performance by tuning hyperparameters. We generated a Receiver Operating Characteristic curve, calculated the Area under the curve (AUC) to evaluate the performance of our logistic regression model. Understanding the ROC Curve:
+- X-axis (False Positive Rate - FPR):
+  Represents the proportion of survivors incorrectly classified as having a death event. Lower FPR indicates fewer false positives, improving model reliability.
+- Y-axis (True Positive Rate - TPR):
+  Indicates the proportion of actual death events correctly identified by the model. Higher TPR reflects better accuracy in predicting deaths.
+- Diagonal Line: 
+  Represents random guessing (AUC = 0.5). A model performing above this line indicates better-than-random classification.
+Model Performance (AUC Analysis):
+- AUC (Area Under the Curve) = 0.83: 
+  The model has strong predictive power, correctly distinguishing between death and survival outcomes 83% of the time.
+  - AUC Interpretation:
+    - AUC = 1: Perfect model. 
+    - AUC = 0.5: Random guessing. 
+    - AUC between 0.5 and 1: Indicates the model’s discriminative ability. Higher AUC values signify better performance.
+Conclusion:
+The ROC curve and the AUC value of 0.83 demonstrate that the model is highly effective in predicting heart failure outcomes. This analysis supports its use for identifying high-risk patients, aiding in better clinical decisions-making
 <img width="567" alt="Screenshot 2024-12-04 at 6 50 12 PM" src="https://github.com/user-attachments/assets/a3726ae8-dfac-4e4c-bceb-823cc32184e1">
 
 We thought it would be ideal to get feature correlation analysis with Death Events and Survival Time in order to understand the data better and helping identify the most relevant ones. However, we found that there were only weaker correlations as the tables below show: 
